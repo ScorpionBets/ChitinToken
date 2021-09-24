@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.6.12;
 
-import "https://github.com/ScorpionBets/testtoken/blob/main/ChitinToken.sol";
-import "https://github.com/ScorpionBets/testtoken/blob/main/IMinter.sol";
+import "https://github.com/ScorpionBets/ChitinToken/blob/main/ChitinToken.sol";
+import "https://github.com/ScorpionBets/ChitinToken/blob/main/IMinter.sol";
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.4.0/contracts/token/ERC20/SafeERC20.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.4.0/contracts/utils/ReentrancyGuard.sol";
@@ -91,7 +91,6 @@ contract Minter is IMinter, Ownable, ReentrancyGuard {
   }
 
   // Set Bonus params. bonus will start to accu on the next block that this function executed
-  // See the calculation and counting in test file.
   function setBonus(
     uint256 _bonusMultiplier,
     uint256 _bonusEndBlock,
