@@ -122,15 +122,4 @@ contract ChitinToken is ERC20("Chitin", "CHIT"), Ownable {
         _totalLock = _totalLock.sub(amount);
     }
 
-
-    function safe32(uint256 n, string memory errorMessage) internal pure returns (uint32) {
-        require(n < 2**32, errorMessage);
-        return uint32(n);
-    }
-
-    function getChainId() internal pure returns (uint256) {
-        uint256 chainId;
-        assembly { chainId := chainid() }
-        return chainId;
-    }
 }
